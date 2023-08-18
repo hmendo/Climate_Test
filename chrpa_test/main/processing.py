@@ -1,5 +1,4 @@
 import numpy as np
-import glob
 import netCDF4 as nc
 import os
 import pandas as pd
