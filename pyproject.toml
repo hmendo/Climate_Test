@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "Climate_Test"
+name = "chrpa_test"
 version = "0.0.1"
 authors = [
   { name="HM & GP", email="hmendo@sandia.gov" },
