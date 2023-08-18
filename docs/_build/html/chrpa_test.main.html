@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>chrpa_test.main package &mdash; chrpa_test  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="chrpa_test.tests package" href="chrpa_test.tests.html" />
+    <link rel="prev" title="chrpa_test package" href="chrpa_test.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> chrpa_test
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">chrpa_test</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="chrpa_test.html">chrpa_test package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="chrpa_test.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">chrpa_test.main package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chrpa_test.tests.html">chrpa_test.tests package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="chrpa_test.html#module-chrpa_test">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">chrpa_test</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">chrpa_test</a></li>
+          <li class="breadcrumb-item"><a href="chrpa_test.html">chrpa_test package</a></li>
+      <li class="breadcrumb-item active">chrpa_test.main package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/chrpa_test.main.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="chrpa-test-main-package">
+<h1>chrpa_test.main package<a class="headerlink" href="#chrpa-test-main-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-chrpa_test.main.processing">
+<span id="chrpa-test-main-processing-module"></span><h2>chrpa_test.main.processing module<a class="headerlink" href="#module-chrpa_test.main.processing" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="chrpa_test.main.processing.convert_PrecipRate_to_mm">
+<span class="sig-prename descclassname"><span class="pre">chrpa_test.main.processing.</span></span><span class="sig-name descname"><span class="pre">convert_PrecipRate_to_mm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">precip_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wvar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chrpa_test.main.processing.convert_PrecipRate_to_mm" title="Permalink to this definition"></a></dt>
+<dd><p>Converts precipitation rate (in [kg/m^2 s]) to total depth (in mm)
+when time interval in between timestamps is provided</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>precip_df</strong> (<em>pandas.DataFrame</em>) – <dl class="simple">
+<dt>Index:</dt><dd><p>RangeIndex</p>
+</dd>
+<dt>Columns:</dt><dd><dl class="simple">
+<dt>Name: time,</dt><dd><p>dtype: datetime64[ns],
+description: time stamps</p>
+</dd>
+<dt>Name: precip,</dt><dd><p>dtype: float64,
+description: precipitation rate in (kg/m^2-s)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>tint</strong> (<em>float</em>) – Time interval in between the timestamps in precipDF</p></li>
+<li><p><strong>wvar</strong> (<em>str</em>) – Name given to preciptation column in precipitation data frame</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>Pandas DataFrame similar to input but with precipitation rate</em></p></li>
+<li><p><em>converted to total depth in mm.  Time stamps with NaNs in</em></p></li>
+<li><p><em>precipitation column are dropped from the data frame.</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chrpa_test.main.processing.convert_to_daily">
+<span class="sig-prename descclassname"><span class="pre">chrpa_test.main.processing.</span></span><span class="sig-name descname"><span class="pre">convert_to_daily</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">w_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tvar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggfun</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chrpa_test.main.processing.convert_to_daily" title="Permalink to this definition"></a></dt>
+<dd><p>Converts a weather data frame with hourly time stamps to daily time
+stamps based on a user defined aggregation method</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>w_df</strong> (<em>pandas.DataFrame</em>) – <dl>
+<dt>Index:</dt><dd><p>RangeIndex</p>
+</dd>
+<dt>Columns:</dt><dd><dl>
+<dt>Name: time,</dt><dd><p>dtype: datetime64[ns],
+description: time stamps</p>
+</dd>
+<dt>Name: any weather variable,</dt><dd><p>dtype: float64,
+description: can be either precipitation (in mm) or</p>
+<blockquote>
+<div><p>wind speed (in m/s)</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>tvar</strong> (<em>str</em>) – Name given to time column in weather data frame</p></li>
+<li><p><strong>aggfun</strong> (<em>string</em>) – Aggregation function that is read in by the ‘aggregate’ method
+for pandas groupby objects (e.g., ‘sum’, ‘mean’, etc.)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>Pandas DataFrame similar to input but with daily time intervals</em></p></li>
+<li><p><em>instead of more frequent time intervals (e.g., hourly)</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chrpa_test.main.processing.convert_to_mm_daily">
+<span class="sig-prename descclassname"><span class="pre">chrpa_test.main.processing.</span></span><span class="sig-name descname"><span class="pre">convert_to_mm_daily</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">precip_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tvar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wvar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggfun</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chrpa_test.main.processing.convert_to_mm_daily" title="Permalink to this definition"></a></dt>
+<dd><p>Converts precipitation rate (in [kg/m^2 s]) to daily total depth
+(in mm) when time interval in between timestamps is provided</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>precip_df</strong> (<em>pandas.DataFrame</em>) – <dl class="simple">
+<dt>Index:</dt><dd><p>RangeIndex</p>
+</dd>
+<dt>Columns:</dt><dd><dl class="simple">
+<dt>Name: time,</dt><dd><p>dtype: datetime64[ns],
+description: time stamps</p>
+</dd>
+<dt>Name: precip,</dt><dd><p>dtype: float64,
+description: precipitation rate in (kg/m^2-s)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>tint</strong> (<em>float</em>) – Time interval in between the timestamps in precipDF</p></li>
+<li><p><strong>tvar</strong> (<em>str</em>) – Name given to time column in weather data frame</p></li>
+<li><p><strong>wvar</strong> (<em>str</em>) – Name given to preciptation column in precipitation data frame</p></li>
+<li><p><strong>aggfun</strong> (<em>string</em>) – Aggregation function that is read in by the ‘aggregate’ method
+for pandas groupby objects (e.g., ‘sum’, ‘mean’, etc.)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>Pandas DataFrame similar to input but with precipitation rate</em></p></li>
+<li><p><em>converted to daily total depth (in mm)</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chrpa_test.main.processing.convert_uasvas_to_wind">
+<span class="sig-prename descclassname"><span class="pre">chrpa_test.main.processing.</span></span><span class="sig-name descname"><span class="pre">convert_uasvas_to_wind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uas_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vas_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ucol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tvar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wndvar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chrpa_test.main.processing.convert_uasvas_to_wind" title="Permalink to this definition"></a></dt>
+<dd><p>Converts u and v (east/west and north/south) components of surface
+wind into wind speed (in m/s). Any time stamps that result in NaNs
+for the output wind speed column are dropped from the output data
+frame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>uas_df</strong> (<em>pandas.DataFrame</em>) – <dl class="simple">
+<dt>Index:</dt><dd><p>RangeIndex</p>
+</dd>
+<dt>Columns:</dt><dd><dl class="simple">
+<dt>Name: time,</dt><dd><p>dtype: datetime64[ns],
+description: time stamps</p>
+</dd>
+<dt>Name: uas,</dt><dd><p>dtype: float64,
+description: u-component of surface wind (in m/s)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>vas_df</strong> (<em>pandas.DataFrame</em>) – <dl class="simple">
+<dt>Index:</dt><dd><p>RangeIndex</p>
+</dd>
+<dt>Columns:</dt><dd><dl class="simple">
+<dt>Name: time,</dt><dd><p>dtype: datetime64[ns],
+description: time stamps</p>
+</dd>
+<dt>Name: uas,</dt><dd><p>dtype: float64,
+description: v-component of surface wind (in m/s)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>ucol</strong> (<em>str</em>) – Name given to wind column in uasDF</p></li>
+<li><p><strong>ucol</strong> – Name given to wind column in vasDF</p></li>
+<li><p><strong>tvar</strong> (<em>str</em>) – Name given to time column in uasDF</p></li>
+<li><p><strong>wndvar</strong> (<em>str</em>) – Name to be given to wind speed column in output data frame</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>Pandas DataFrame with u and v components of wind converted to wind</em></p></li>
+<li><p><em>speed (in m/s)</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chrpa_test.main.processing.find_rl_location">
+<span class="sig-prename descclassname"><span class="pre">chrpa_test.main.processing.</span></span><span class="sig-name descname"><span class="pre">find_rl_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">future_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rl</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chrpa_test.main.processing.find_rl_location" title="Permalink to this definition"></a></dt>
+<dd><p>Finds a return period corresponding to a specified return level in
+a data frame of return-periods/return-levels as output by
+pyextremes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>future_df</strong> (<em>pandas.DataFrame</em>) – <dl>
+<dt>Index:</dt><dd><p>return periods</p>
+</dd>
+<dt>Columns:</dt><dd><dl>
+<dt>Name: return value,</dt><dd><p>dtype: float64,
+description: return values of specified return</p>
+<blockquote>
+<div><p>period (index)</p>
+</div></blockquote>
+</dd>
+<dt>Name: lower ci,</dt><dd><p>dtype: float64,
+description: lower confidence interval for return</p>
+<blockquote>
+<div><p>values of specified return period
+(index)</p>
+</div></blockquote>
+</dd>
+<dt>Name: upper ci,</dt><dd><p>dtype: float64,
+description: lower confidence interval for return
+values of specified return period (index)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>rl</strong> (<em>float</em>) – Return level of interest for which a corresponding return
+period should be identified.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>Return period in future_df that most closely approximates the</em></p></li>
+<li><p><em>specified return level</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chrpa_test.main.processing.get_annual_max">
+<span class="sig-prename descclassname"><span class="pre">chrpa_test.main.processing.</span></span><span class="sig-name descname"><span class="pre">get_annual_max</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">daily_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_dict_rename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chrpa_test.main.processing.get_annual_max" title="Permalink to this definition"></a></dt>
+<dd><p>Takes in a pandas data frame for daily weather and outputs annual
+maximum for the years covered in the input data. Function also
+renames new data frame columns to user-defined preference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>daily_df</strong> (<em>pandas.DataFrame</em>) – <dl class="simple">
+<dt>Index:</dt><dd><p>RangeIndex</p>
+</dd>
+<dt>Columns:</dt><dd><dl class="simple">
+<dt>Name: date,</dt><dd><p>dtype: datetime.date object,
+description: historical dates</p>
+</dd>
+<dt>Name: precip or wind,</dt><dd><p>dtype: float64,
+description: any daily weather
+parameter (e.g., precipitation or wind)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>max_dict_rename</strong> (<em>dict</em>) – Dictionary used to rename weather data column in output data
+frame so as to distinguish from input data (e.g., from ‘precip’
+in dailyDF to ‘MaxPrecip’ in output data frame).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>pandas.DataFrames with annual maximum weather for years covered in</em></p></li>
+<li><p><em>input data</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chrpa_test.main.processing.get_closest_point">
+<span class="sig-prename descclassname"><span class="pre">chrpa_test.main.processing.</span></span><span class="sig-name descname"><span class="pre">get_closest_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site_loc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncfilepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chrpa_test.main.processing.get_closest_point" title="Permalink to this definition"></a></dt>
+<dd><p>Finds the closest data point between location of interest
+(site_loc) and weather stations captured by .nc files
+(ncfilepath)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>site_loc</strong> (<em>tuple</em>) – Latitude and longitude in the form of (lat, lon) for location
+of interest</p></li>
+<li><p><strong>ncfilepath</strong> (<em>str</em>) – A filepath in the form of a string that points to the location
+of the netCDF file of interest</p></li>
+<li><p><strong>offset</strong> (<em>list</em>) – Contains the lattitude and longitude offest in the form of
+[lat, lon]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>Dictionary containing lat/lon, distance to, and corresponding x/y</em></p></li>
+<li><p><em>indices in the netCDF file (climate data) to the weather station</em></p></li>
+<li><p><em>that is closest to the input site_loc</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chrpa_test.main.processing.make_ordered_time_weather_lists">
+<span class="sig-prename descclassname"><span class="pre">chrpa_test.main.processing.</span></span><span class="sig-name descname"><span class="pre">make_ordered_time_weather_lists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nc_files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wstat_indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncwvar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chrpa_test.main.processing.make_ordered_time_weather_lists" title="Permalink to this definition"></a></dt>
+<dd><p>Takes a list of .nc files corresponding to different time frames
+for a specific weather model and produces an ordered list of time
+and weather numpy arrays for an identified weather station location
+(wstat_loc)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nc_files</strong> (<em>list</em>) – A list of strings, where each string is a filepath that points
+to the locations of the netCDF files corresponding to different
+years of a climate model</p></li>
+<li><p><strong>wstat_indices</strong> (<em>tuple</em>) – xc and yc indices corresponding to specified location
+(weather station of interest) in the form of (xc,yc)</p></li>
+<li><p><strong>ncwvar</strong> (<em>str</em>) – Weather variable of interest to be extracted from you .nc file
+(e.g., ‘pr’, ‘uas’, or ‘vas’)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>time_list</strong> (<em>list</em>) – List of numpy arrays corresponding to time data</p></li>
+<li><p><strong>weather_list</strong> (<em>list</em>) – List of numpy arrays corresponding to weather data</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chrpa_test.main.processing.myextremes">
+<span class="sig-prename descclassname"><span class="pre">chrpa_test.main.processing.</span></span><span class="sig-name descname"><span class="pre">myextremes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ann_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rp_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wvar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chrpa_test.main.processing.myextremes" title="Permalink to this definition"></a></dt>
+<dd><p>Uses pyextremes to fit extreme (maximum annual) weather data to a
+generalized extreme value distribution (GEVD). The GEVD fit is then
+used to calculate return values for user-defined return period and
+user-defined confidence intervals. Takes the output of
+get_annual_max for annDF</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ann_df</strong> (<em>pandas.DataFrame</em>) – <dl class="simple">
+<dt>Index:</dt><dd><p>RangeIndex</p>
+</dd>
+<dt>Columns:</dt><dd><dl class="simple">
+<dt>Name: year,</dt><dd><p>dtype: string, float, or int
+description: historical dates</p>
+</dd>
+<dt>Name: precip or wind,</dt><dd><p>dtype: float64,
+description: any daily weather
+parameter (e.g., precipitation or wind)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>rp_array</strong> (<em>numpy.ndarray</em>) – Numpy array with return periods for which return values should
+be calculated with pyextremes</p></li>
+<li><p><strong>wvar</strong> (<em>str</em>) – Column name given to weather variable of interest in annDF
+(e.g., ‘MaxPrecip’, ‘MaxWind’, etc)</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – Width of confidence interval (0,1).  If None (default), return
+None for upper and lower confidence interval bounds.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>pandas.DataFrame providing return values for user-requested return</em></p></li>
+<li><p><em>periods. Upper and lower confidence bounds are also output if</em></p></li>
+<li><p><em>alpha is non-zero.</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chrpa_test.main.processing.parse_data_orig">
+<span class="sig-prename descclassname"><span class="pre">chrpa_test.main.processing.</span></span><span class="sig-name descname"><span class="pre">parse_data_orig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ncfilepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chrpa_test.main.processing.parse_data_orig" title="Permalink to this definition"></a></dt>
+<dd><p>Extracts latitude and longitude from a netCDF (network Common Data
+Form) format and returns them in a data frame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ncfilepath</strong> (<em>str</em>) – A filepath in the form of a string that points to the location
+of the netCDF file of interest</p></li>
+<li><p><strong>offset</strong> (<em>list</em>) – Contains the lattitude and longitude offest in the form of
+[lat, lon]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary with latitude and longitude components corresponding
+to the input file</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chrpa_test.main.processing.summary_stat_fun">
+<span class="sig-prename descclassname"><span class="pre">chrpa_test.main.processing.</span></span><span class="sig-name descname"><span class="pre">summary_stat_fun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">daily_df_current</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">daily_df_future</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wmodel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">site</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chrpa_test.main.processing.summary_stat_fun" title="Permalink to this definition"></a></dt>
+<dd><p>Takes in a pandas data frame for daily weather and outputs
+statstical summaries for that data set
+(min, max, mean, and std. dev.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>daily_df_current</strong> (<em>pandas.DataFrame</em>) – <dl>
+<dt>Index:</dt><dd><p>RangeIndex</p>
+</dd>
+<dt>Columns:</dt><dd><dl>
+<dt>Name: date,</dt><dd><p>dtype: datetime.date object,
+description: historical dates</p>
+</dd>
+<dt>Name: precip or wind,</dt><dd><p>dtype: float64,
+description: any daily weather parameter</p>
+<blockquote>
+<div><p>(e.g., precipitation or wind)</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>daily_df_future</strong> (<em>pandas.DataFrame</em>) – <dl class="simple">
+<dt>Index:</dt><dd><p>RangeIndex</p>
+</dd>
+<dt>Columns:</dt><dd><dl class="simple">
+<dt>Name: date,</dt><dd><p>dtype: datetime.date object,
+description: future dates</p>
+</dd>
+<dt>Name: precip or wind,</dt><dd><p>dtype: float64,
+description: any daily weather
+parameter (e.g., precipitation or wind)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>wmodel</strong> (<em>str</em>) – Name for the climate model used for weather data sets</p></li>
+<li><p><strong>site</strong> (<em>str</em>) – Name for the specific site whose weather being analyzed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>pandas.DataFrames with statistical summaries</em></p></li>
+<li><p><em>(min, max, mean, and std. dev.)</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chrpa_test.main.processing.timedelta_to_continuous_w_weather">
+<span class="sig-prename descclassname"><span class="pre">chrpa_test.main.processing.</span></span><span class="sig-name descname"><span class="pre">timedelta_to_continuous_w_weather</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_data_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weather_data_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wvar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%Y-%m-%d</span> <span class="pre">%H:%M:%S'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">td_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'days'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chrpa_test.main.processing.timedelta_to_continuous_w_weather" title="Permalink to this definition"></a></dt>
+<dd><p>Takes a list of time and weather numpy arrays that correspond to a
+specific location from a single climate model. Concatenates the
+time and weather lists into a single pandas data frame with
+continuous time and weather data as two separate columns of the
+data frame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time_data_list</strong> (<em>list</em>) – List of numpy arrays corresponding to time data for a specific
+climate model</p></li>
+<li><p><strong>weather_data_list</strong> (<em>list</em>) – List of numpy arrays corresponding to weather data for a
+specific climate model</p></li>
+<li><p><strong>wvar</strong> (<em>str</em>) – Column name given to weather variable of interest in weather
+data frame (e.g., ‘precip’, ‘uas’, or ‘vas’)</p></li>
+<li><p><strong>start_time</strong> (<em>str</em>) – Time stamp corresponding to the start time of the arrays in
+time_data_list (e.g., ‘1968-01-01 00:00:00’)</p></li>
+<li><p><strong>start_time_format</strong> (<em>str</em>) – Format in which the start_time is input
+(Default is ‘%Y-%m-%d %H:%M:%S’)</p></li>
+<li><p><strong>td_unit</strong> (<em>str</em>) – Unit in which the arrays in time_data_list are provided
+(e.g., ‘days’)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>Pandas DataFrame with continuous time and weather data as two</em></p></li>
+<li><p><em>separate columns of the data frame</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chrpa_test.main.processing.weather_data_calcs">
+<span class="sig-prename descclassname"><span class="pre">chrpa_test.main.processing.</span></span><span class="sig-name descname"><span class="pre">weather_data_calcs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nc_filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wstat_indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncwvar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chrpa_test.main.processing.weather_data_calcs" title="Permalink to this definition"></a></dt>
+<dd><p>Extracts the weather and time data from a .nc file (nc_filepath)
+for specified location(wstat_coords)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ncfilepath</strong> (<em>str</em>) – A filepath in the form of a string that points to the location
+of the netCDF file of interest</p></li>
+<li><p><strong>wstat_indices</strong> (<em>tuple</em>) – xc and yc indices corresponding to specified location
+(weather station of interest) in the form of (xc,yc)</p></li>
+<li><p><strong>ncwvar</strong> (<em>str</em>) – Weather variable of interest to be extracted from you .nc file
+(e.g., ‘pr’, ‘uas’, or ‘vas’)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>time_data</strong> (<em>Numpy array</em>) – Numpy array corresponding to time data</p></li>
+<li><p><strong>weather_data</strong> (<em>Numpy array</em>) – Numpy array corresponding to weather data</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-chrpa_test.main">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-chrpa_test.main" title="Permalink to this heading"></a></h2>
+<p>main module</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="chrpa_test.html" class="btn btn-neutral float-left" title="chrpa_test package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="chrpa_test.tests.html" class="btn btn-neutral float-right" title="chrpa_test.tests package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, HM.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
