@@ -15,9 +15,8 @@ pvanalytics
 timezonefinder
 pyDOE
 tensorflow
-glob
-netCDF4
 os
+netCDF4
 datetime
 geopy
 pyextremes
