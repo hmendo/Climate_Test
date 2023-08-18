@@ -19,7 +19,7 @@ geopy
 #os
 netCDF4
 #datetime
-#pyextremes
+pyextremes
 
 # Testing / Docs
 pytest
