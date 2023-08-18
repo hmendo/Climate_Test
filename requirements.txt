@@ -17,7 +17,7 @@ pyDOE
 tensorflow
 geopy
 #os
-#netCDF4
+netCDF4
 #datetime
 #pyextremes
 
