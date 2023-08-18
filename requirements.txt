@@ -16,10 +16,10 @@ timezonefinder
 pyDOE
 tensorflow
 geopy
-os
-netCDF4
-datetime
-pyextremes
+#os
+#netCDF4
+#datetime
+#pyextremes
 
 # Testing / Docs
 pytest
