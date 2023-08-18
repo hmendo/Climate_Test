@@ -15,10 +15,10 @@ pvanalytics
 timezonefinder
 pyDOE
 tensorflow
+geopy
 os
 netCDF4
 datetime
-geopy
 pyextremes
 
 # Testing / Docs
