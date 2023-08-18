@@ -15,6 +15,12 @@ pvanalytics
 timezonefinder
 pyDOE
 tensorflow
+glob
+netCDF4
+os
+datetime
+geopy
+pyextremes
 
 # Testing / Docs
 pytest
