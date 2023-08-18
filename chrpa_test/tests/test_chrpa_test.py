@@ -7,10 +7,11 @@ tests for it.
 Standard Deviation is the sample standard deviation not a population 
 deviation
 """
-import main
+
 import pandas as pd
 import numpy as np
 from datetime import datetime
+from chrpa_test.main import processing
 
 # =============================================================================
 # def test_parse_data_orig():
