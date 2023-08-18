@@ -11,7 +11,7 @@ deviation
 import pandas as pd
 import numpy as np
 from datetime import datetime
-from chrpa_test.main import processing
+from chrpa_test.main import processing as main
 
 # =============================================================================
 # def test_parse_data_orig():
